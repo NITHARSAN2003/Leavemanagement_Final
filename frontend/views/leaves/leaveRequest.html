@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Request</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="mainForm">
+        <div class="container">
+            <div class="header">
+                <h2 id="welcomeMessage"></h2>
+                <button id="logoutButton" class="btn-logout">Logout</button>
+            </div>
+
+
+            <div class="icon">
+
+                <i class="fa fa-envelope-open" aria-hidden="true"></i>
+
+            </div>
+
+
+            <h2>Submit Leave Request</h2>
+            <form id="leaveRequestForm" class="form">
+                <div class="input-box">
+                    <label for="reason">Reason:</label>
+                    <input type="text" id="reason" name="reason" required>
+                </div><br><br>
+
+                <div class="input-box">
+                    <label for="dateFrom">From:</label>
+                    <input type="date" id="dateFrom" name="dateFrom" required>
+                </div><br><br>
+                <div class="input-box">
+                    <label for="numOfDays">Number of Days:</label>
+                    <input type="number" id="numOfDays" name="numOfDays" required><br><br>
+
+                </div>
+
+                <div class="input-box">
+                    <label for="applicationDate">Application Date:</label>
+                    <input type="date" id="applicationDate" name="applicationDate" required><br><br>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+
+
+            <h3>Your Leave Requests</h3>
+            <ul id="leaveRequests" class="leave-list"></ul>
+        </div>
+    </div>
+    <img src="./wpsierra-featured-image.jpg" alt="Side Image" class="side-image">
+
+
+
+    <script src="leaveRequest.js"></script>
+</body>
+
+</html>
