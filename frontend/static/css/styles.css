@@ -7,8 +7,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #193759, #c53f63);
-  }
+    background: linear-gradient(135deg, #00bcf0, #00b294);
+    background-size: cover;  /* This ensures the gradient covers the entire screen */
+    background-repeat: no-repeat; /* Explicitly ensures no repetition (not necessary for gradient, but helpful for clarity) */
+    height: 100vh; /* Ensure the body height is 100% of the viewport */
+}
+
+
   
   .navbar {
     display: flex;
