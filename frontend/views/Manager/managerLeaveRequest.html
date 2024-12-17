@@ -7,256 +7,257 @@
     <title>Leave Management</title>
     <link rel="stylesheet" href="style1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-   
+
     <style>
-*{
-        margin: 0;
-        padding: 0;
-    
-    }
+        * {
+            margin: 0;
+            padding: 0;
 
-body {
-  
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #2e66a6, #902340);
-}
+        }
 
-.container {
-    width: 1000px;
-    height: 300px;
-    padding: 25px;
-    background: linear-gradient(135deg, #96bdea, #e22f5f);
-    border-radius: 12px;
-    box-shadow: 25px 26px rgba(0, 0, 0, 0.2);
-    transition: opacity 3s ease, transform 3s ease;
-    font-size: 22px;
-}
+        body {
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #2e66a6, #902340);
+        }
 
-.side-image {
-    border: none;
-    outline: none;
-    opacity: 3;
-    filter: grayscale(20%) contrast(50%);
-    border-radius: 50px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 50%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: -1;
-    float: left;
-}
+        .container {
+            width: 1000px;
+            height: 300px;
+            padding: 25px;
+            background: linear-gradient(135deg, #96bdea, #e22f5f);
+            border-radius: 12px;
+            box-shadow: 25px 26px rgba(0, 0, 0, 0.2);
+            transition: opacity 3s ease, transform 3s ease;
+            font-size: 22px;
 
-.icon {
-    text-align: center;
-    font-size: 3rem;
-    color: #05203f;
-}
+        }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
+        .side-image {
+            border: none;
+            outline: none;
+            opacity: 3;
+            filter: grayscale(20%) contrast(50%);
+            border-radius: 50px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: -1;
+            float: left;
+        }
 
+        .icon {
+            text-align: center;
+            font-size: 3rem;
+            color: #05203f;
+        }
 
-.btn-logout {
-    padding: 5px 15px;
-    border-style:outset;
-    border-color: #c31a4d;
-    background: #da1c1c;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.btn-logout:hover {
-    background: #c31a4d;
-}
-
-h2 {
-    margin: 20px 0;
-    text-align: center;
-    color: #6a041f;
-
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #05203f;
-}
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
 
 
+        .btn-logout {
+            padding: 5px 15px;
+            border-style: outset;
+            border-color: #c31a4d;
+            background: #da1c1c;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+        }
 
-input,
-select {
-    background-color: #e0c3cf;
-    width: 100%;
-    padding: 10px;
-    border-color:#e94e77;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s;
-    color: #05203f;
+        .btn-logout:hover {
+            background: #c31a4d;
+        }
 
-}
-.status1{
-    background-color: #e0c3cf;
-    border-style: none;
-    padding: 10px;
-    color: #05203f;
-}
+        h2 {
+            margin: 20px 0;
+            text-align: center;
+            color: #6a041f;
 
-#statusFilter{
-    background-color: #e0c3cf;
-    border-color:#e94e77;
-    border-style: groove;
-}
+        }
 
-
-#statusFilter:hover{
-    background-color: #d5adbe;;
-}
-
-select:focus {
-    border-color: #650318;
-}
-
-.leave-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-
-.leave-list li {
-    background: #f8f8f8;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #05203f;
+        }
 
 
 
-.btn {
-    background-color: #5cb85c;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-}
+        input,
+        select {
+            background-color: #e0c3cf;
+            width: 100%;
+            padding: 10px;
+            border-color: #e94e77;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+            color: #05203f;
 
-.btn-approve {
-    background-color: #5cb85c;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-}
+        }
 
-.btn-reject {
-    background-color: #d9534f;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-}
+        .status1 {
+            background-color: #e0c3cf;
+            border-style: none;
+            padding: 10px;
+            color: #05203f;
+        }
 
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-    padding-top: 60px;
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; 
-    padding: 20px;
-    border: 1px solid #888;
-    width: 300px; 
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-.modal h3 {
-    color: #4a90e2;
-    margin-bottom: 15px;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    resize: none; 
-}
-
-textarea:focus {
-    border-color: #4a90e2;
-}
-
-.btn {
-    font-size: 1rem;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background: #092e59;
-}
+        #statusFilter {
+            background-color: #e0c3cf;
+            border-color: #e94e77;
+            border-style: groove;
+        }
 
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        #statusFilter:hover {
+            background-color: #d5adbe;
+            ;
+        }
+
+        select:focus {
+            border-color: #650318;
+        }
+
+        .leave-list {
+            list-style-type: none;
+            padding: 0;
+        }
 
 
-@media (max-width: 500px) {
-    .container {
-        padding: 10px;
-    }
-    
-    .modal-content {
-        width: 90%; 
-    }
-}
+        .leave-list li {
+            background: #f8f8f8;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
 
 
+        .btn {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-approve {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-reject {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal h3 {
+            color: #4a90e2;
+            margin-bottom: 15px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            resize: none;
+        }
+
+        textarea:focus {
+            border-color: #4a90e2;
+        }
+
+        .btn {
+            font-size: 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #092e59;
+        }
+
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        @media (max-width: 500px) {
+            .container {
+                padding: 10px;
+            }
+
+            .modal-content {
+                width: 90%;
+            }
+        }
     </style>
 
 
@@ -278,10 +279,10 @@ textarea:focus {
 
         <label for="statusFilter">Filter by Status:</label>
         <select id="statusFilter">
-                <option value="all">All</option>
-                <option value="pending">Pending</option>
-                <option value="approved">Approved</option>
-                <option value="rejected">Rejected</option>
+            <option value="all">All</option>
+            <option value="pending">Pending</option>
+            <option value="approved">Approved</option>
+            <option value="rejected">Rejected</option>
         </select>
 
         <ul id="leaveRequests" class="leave-list"></ul>
@@ -305,73 +306,73 @@ textarea:focus {
     <img src="./wpsierra-featured-image.jpg" alt="Side Image" class="side-image">
 
 
-    <script >
+    <script>
 
-document.addEventListener('DOMContentLoaded', async function () {
-    
-
-    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
-
-    // if (!loggedInUser) {
-    //     alert('You must log in first!');
-    //     window.location.href = '/login';
-      
-    // }
-
-    if (!loggedInUser) {
-        alert('You must log in first!');
-        window.location.href = '/login';
-        return;
-    }
-    console.log(loggedInUser);
+        document.addEventListener('DOMContentLoaded', async function () {
 
 
+            const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
 
-    if(loggedInUser.role == 'Employee'){
-        window.location.href = 'leaveRequest.html';
-    }
-    // Display welcome message
-    const welcomeMessage = document.getElementById('welcomeMessage');
-    welcomeMessage.textContent = `Welcome, ${loggedInUser.firstName} ${loggedInUser.lastName}`;
+            // if (!loggedInUser) {
+            //     alert('You must log in first!');
+            //     window.location.href = '/login';
 
-    // Logout button functionality
-    const logoutButton = document.getElementById('logoutButton');
-    logoutButton.addEventListener('click', function () {
-        localStorage.removeItem('loggedInUser');
-        alert('You have been logged out.');
-        window.location.href = '/login';
-    });
+            // }
 
-    const statusFilter = document.getElementById('statusFilter');
-    const leaveRequestsList = document.getElementById('leaveRequests');
-    let leaveRequests = [];
+            if (!loggedInUser) {
+                alert('You must log in first!');
+                window.location.href = '/login';
+                return;
+            }
+            console.log(loggedInUser);
 
-    statusFilter.addEventListener('change', function () {
-        renderLeaveRequests();
-    });
 
-    async function loadLeaveRequests() {
-        try {
-            const response = await fetch(`http://localhost:3000/leaveRequests?employeeId_ne=${loggedInUser.employeeId}&_embed=employee`);
-            leaveRequests = await response.json();
-            renderLeaveRequests();
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    }
 
-    function renderLeaveRequests() {
-        const status = statusFilter.value;
-        leaveRequestsList.innerHTML = '';
+            if (loggedInUser.role == 'Employee') {
+                window.location.href = 'leaveRequest.html';
+            }
+            // Display welcome message
+            const welcomeMessage = document.getElementById('welcomeMessage');
+            welcomeMessage.textContent = `Welcome, ${loggedInUser.firstName} ${loggedInUser.lastName}`;
 
-        const filteredRequests = leaveRequests.filter(request => {
-            return status === 'all' || request.status.toLowerCase() === status;
-        });
+            // Logout button functionality
+            const logoutButton = document.getElementById('logoutButton');
+            logoutButton.addEventListener('click', function () {
+                localStorage.removeItem('loggedInUser');
+                alert('You have been logged out.');
+                window.location.href = '/login';
+            });
 
-        filteredRequests.forEach(request => {
-            const li = document.createElement('li');
-            li.classList.add('leave-item');
-            li.innerHTML = `<div class= "status1">
+            const statusFilter = document.getElementById('statusFilter');
+            const leaveRequestsList = document.getElementById('leaveRequests');
+            let leaveRequests = [];
+
+            statusFilter.addEventListener('change', function () {
+                renderLeaveRequests();
+            });
+
+            async function loadLeaveRequests() {
+                try {
+                    const response = await fetch(`http://localhost:3000/leaveRequests?employeeId_ne=${loggedInUser.employeeId}&_embed=employee`);
+                    leaveRequests = await response.json();
+                    renderLeaveRequests();
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            }
+
+            function renderLeaveRequests() {
+                const status = statusFilter.value;
+                leaveRequestsList.innerHTML = '';
+
+                const filteredRequests = leaveRequests.filter(request => {
+                    return status === 'all' || request.status.toLowerCase() === status;
+                });
+
+                filteredRequests.forEach(request => {
+                    const li = document.createElement('li');
+                    li.classList.add('leave-item');
+                    li.innerHTML = `<div class= "status1">
                 <div><b>Requested By : ${request.employee.firstName + " " + request.employee.lastName}</b></div>
                 <div>Reason: ${request.reason}</div>
                 <div>From: ${request.dateFrom}</div>
@@ -382,84 +383,84 @@ document.addEventListener('DOMContentLoaded', async function () {
                 <button class="btn-approve" data-id="${request.id}">Approve</button>
                 <button class="btn-reject" data-id="${request.id}">Reject</button>` : ''}</div>
             `;
-            leaveRequestsList.appendChild(li);
-        });
-
-        document.querySelectorAll('.btn-approve').forEach(button => {
-            button.addEventListener('click', handleApprove);
-        });
-
-        document.querySelectorAll('.btn-reject').forEach(button => {
-            button.addEventListener('click', handleReject);
-        });
-    }
-
-    async function handleApprove(event) {
-        const requestId = event.target.dataset.id;
-        const request = leaveRequests.find(req => req.id == requestId);
-        if (request) {
-            request.status = 'Approved';
-            request.processedDate = new Date().toISOString().split('T')[0]; // Adding processed date
-
-            try {
-                await fetch(`http://localhost:3000/leaveRequests/${requestId}`, {
-                    method: 'PATCH',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(request)
+                    leaveRequestsList.appendChild(li);
                 });
-                loadLeaveRequests();
-            } catch (error) {
-                console.error('Error:', error);
+
+                document.querySelectorAll('.btn-approve').forEach(button => {
+                    button.addEventListener('click', handleApprove);
+                });
+
+                document.querySelectorAll('.btn-reject').forEach(button => {
+                    button.addEventListener('click', handleReject);
+                });
             }
-        }
-    }
 
-    const rejectModal = document.getElementById('rejectModal');
-    const rejectForm = document.getElementById('rejectForm');
-    let requestToReject = null;
+            async function handleApprove(event) {
+                const requestId = event.target.dataset.id;
+                const request = leaveRequests.find(req => req.id == requestId);
+                if (request) {
+                    request.status = 'Approved';
+                    request.processedDate = new Date().toISOString().split('T')[0]; // Adding processed date
 
-    function handleReject(event) {
-        requestToReject = leaveRequests.find(req => req.id == event.target.dataset.id);
-        if (requestToReject) {
-            rejectModal.style.display = 'block';
-        }
-    }
+                    try {
+                        await fetch(`http://localhost:3000/leaveRequests/${requestId}`, {
+                            method: 'PATCH',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(request)
+                        });
+                        loadLeaveRequests();
+                    } catch (error) {
+                        console.error('Error:', error);
+                    }
+                }
+            }
 
-    rejectForm.addEventListener('submit', async function (event) {
-        event.preventDefault();
-        const rejectionReason = document.getElementById('rejectionReason').value;
+            const rejectModal = document.getElementById('rejectModal');
+            const rejectForm = document.getElementById('rejectForm');
+            let requestToReject = null;
 
-        if (requestToReject) {
-            requestToReject.status = 'Rejected';
-            requestToReject.processedDate = new Date().toISOString().split('T')[0];
-            requestToReject.rejectionReason = rejectionReason;
+            function handleReject(event) {
+                requestToReject = leaveRequests.find(req => req.id == event.target.dataset.id);
+                if (requestToReject) {
+                    rejectModal.style.display = 'block';
+                }
+            }
 
-            try {
-                await fetch(`http://localhost:3000/leaveRequests/${requestToReject.id}`, {
-                    method: 'PATCH',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(requestToReject)
-                });
+            rejectForm.addEventListener('submit', async function (event) {
+                event.preventDefault();
+                const rejectionReason = document.getElementById('rejectionReason').value;
+
+                if (requestToReject) {
+                    requestToReject.status = 'Rejected';
+                    requestToReject.processedDate = new Date().toISOString().split('T')[0];
+                    requestToReject.rejectionReason = rejectionReason;
+
+                    try {
+                        await fetch(`http://localhost:3000/leaveRequests/${requestToReject.id}`, {
+                            method: 'PATCH',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(requestToReject)
+                        });
+                        rejectModal.style.display = 'none';
+                        loadLeaveRequests();
+                    } catch (error) {
+                        console.error('Error:', error);
+                    }
+                }
+            });
+
+            // Close modal
+            document.querySelector('.close').addEventListener('click', function () {
                 rejectModal.style.display = 'none';
-                loadLeaveRequests();
-            } catch (error) {
-                console.error('Error:', error);
-            }
-        }
-    });
+            });
 
-    // Close modal
-    document.querySelector('.close').addEventListener('click', function () {
-        rejectModal.style.display = 'none';
-    });
-
-    // Load initial leave requests
-    loadLeaveRequests();
-});
+            // Load initial leave requests
+            loadLeaveRequests();
+        });
 
 
     </script>

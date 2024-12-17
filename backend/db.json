@@ -187,6 +187,25 @@
       },
       "processedDate": "2024-12-10",
       "rejectionReason": "No Leave\n"
+    },
+    {
+      "id": "71d4",
+      "employeeId": "EMP_4SK8Q",
+      "reason": "fever",
+      "dateFrom": "2024-12-11",
+      "numOfDays": "1",
+      "applicationDate": "2024-12-04",
+      "status": "Approved",
+      "employee": {
+        "id": "EMP_4SK8Q",
+        "employeeId": "EMP_4SK8Q",
+        "nic": "200431400979",
+        "firstName": "Pathmarasan",
+        "lastName": "Piragash",
+        "dob": "2004-03-10",
+        "doj": "2024-09-01"
+      },
+      "processedDate": "2024-12-17"
     }
   ]
 }

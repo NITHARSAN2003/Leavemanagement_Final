@@ -1,2 +1,211 @@
-<h1 style="justify-content: center;">Welcome To Leave Management System</h1>
+<!-- <h1 style="justify-content: center; color: brown;">Welcome To Leave Management System</h1>
+ -->
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Management System</title>
+
+    <!-- Google Font Import -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: cursive;
+            font-weight: bold;
+            justify-content: center;
+            margin-top: 50px;
+            color: rgb(11, 0, 136);
+            font-size: 50px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out, moveHorizontally 4s infinite alternate, moveVertically 5s infinite alternate;
+            -webkit-text-stroke: 2px rgb(255, 255, 255);
+            /* Adds a 1px black stroke to the text */
+            text-stroke: 1px rgb(255, 255, 255);
+            /* For browsers that support unprefixed property */
+        }
+
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Horizontal Move Animation */
+        @keyframes moveHorizontally {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(30px);
+            }
+        }
+
+        /* Vertical Move Animation */
+        @keyframes moveVertically {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes colorChange {
+            from {
+                color: brown;
+            }
+
+            to {
+                color: darkgreen;
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(3deg);
+            }
+        }
+
+        #container {
+            color: #999;
+            text-transform: uppercase;
+            font-size: 36px;
+            font-weight: bold;
+            padding-top: 200px;
+            position: fixed;
+            width: 100%;
+            bottom: 45%;
+            display: block;
+        }
+
+        #flip {
+            height: 50px;
+            overflow: hidden;
+        }
+
+        #flip>div>div {
+            color: #fff;
+            padding: 4px 12px;
+            height: 45px;
+            margin-bottom: 45px;
+            display: inline-block;
+        }
+
+        #flip div:first-child {
+            animation: show 5s linear infinite;
+        }
+
+        #flip div div {
+            background: #42c58a;
+        }
+
+        #flip div:first-child div {
+            background: #4ec7f3;
+        }
+
+        #flip div:last-child div {
+            background: #DC143C;
+        }
+
+        @keyframes show {
+            0% {
+                margin-top: -270px;
+            }
+
+            5% {
+                margin-top: -180px;
+            }
+
+            33% {
+                margin-top: -180px;
+            }
+
+            38% {
+                margin-top: -90px;
+            }
+
+            66% {
+                margin-top: -90px;
+            }
+
+            71% {
+                margin-top: 0px;
+            }
+
+            99.99% {
+                margin-top: 0px;
+            }
+
+            100% {
+                margin-top: -270px;
+            }
+        }
+
+        p {
+            position: fixed;
+            width: 100%;
+            bottom: 30px;
+            font-size: 20px;
+            color: #fff308;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome To Employee Leave Management System</h1>
+
+    <div id="container">
+        <div id="flip">
+            <div>
+                <div>Apply Leave</div>
+            </div>
+            <div>
+                <div>Manage Leave</div>
+            </div>
+            <div>
+                <div>Approve Leave</div>
+            </div>
+        </div>
+    </div>
+
+    <p>&copy; Employee Leave Management System</p>
+</body>
+
+</html>

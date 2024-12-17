@@ -11,6 +11,13 @@ body {
     background-size: cover;  /* This ensures the gradient covers the entire screen */
     background-repeat: no-repeat; /* Explicitly ensures no repetition (not necessary for gradient, but helpful for clarity) */
     height: 100vh; /* Ensure the body height is 100% of the viewport */
+    background-image: url("./premium_photo-1661775221909-11fc3c0c0891.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   
+    /* Keeps the background fixed during scroll */
 }
 
 
