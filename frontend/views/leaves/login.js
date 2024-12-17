@@ -1,61 +1,66 @@
-document.getElementById('loginForm').addEventListener('submit', async function (event) {
-    event.preventDefault();
+// document.getElementById('loginForm').addEventListener('submit', async function (event) {
+//     event.preventDefault();
 
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+//     const username = document.getElementById('username').value;
+//     const password = document.getElementById('password').value;
 
-    try {
-        // Fetch user data with embedded employee data
+//     try {
+       
 
-        // http://localhost:3000/users?_embed=employee&username=EMP_L6Zae&password=pwd123
-
-        const response = await fetch(`http://localhost:3000/users?username=${username}&password=${password}&_embed=employee`);
+//         const response = await fetch(`http://localhost:3000/users?username=${username}&password=${password}&_embed=employee`);
 
 
-        const users = await response.json();
+//         const users = await response.json();
 
 
-        if (users.length > 0) {
-            const user = users[0];
+//         if (users.length > 0) {
+//             const user = users[0];
 
-            // Find the associated employee data
-            const employee = user.employee;
-
-            //console.log(employee);
-
-            if (employee) {
-                // Store the logged-in user and employee details
-                const loggedInUser = {
-
-                    username: user.username,
-                    employeeId: employee.employeeId,
-                    firstName: employee.firstName,
-                    lastName: employee.lastName,
-                    role: user.role
-                };
-
-                localStorage.setItem('loggedInUser', JSON.stringify(loggedInUser));
+           
+//             const employee = user.employee;
 
 
-                if (user.role == 'Admin') {
+//             if (employee) {
+//                 const loggedInUser = {
 
-                    window.location.href = 'leaveRequest.html';
-                    alert('Login successful!');
-                } else if (user.role == 'Employee') {
-                    window.location.href = 'managerLeaveRequest.html';
+//                     username: user.username,
+//                     employeeId: employee.employeeId,
+//                     firstName: employee.firstName,
+//                     lastName: employee.lastName,
+//                     role: user.role
+//                 };
 
-                } else if (user.role == 'Manager') {
-                    window.location.href = 'managerLeaveRequest.html';
-                    alert('Login successful!');
-                }
-            } else {
-                alert('Employee data not found.');
-            }
-        } else {
-            alert('Invalid username or password.');
-        }
-    } catch (error) {
-        console.error('Error:', error);
-        alert('An error occurred while logging in.');
-    }
-});
+//                 localStorage.setItem('loggedInUser', JSON.stringify(loggedInUser));
+
+
+//                 if (user.role == 'Admin') {
+
+//                     window.location.href = '/Admin';
+//                     alert('Login successful!');
+//                 } 
+                
+//                 else if (user.role == 'Employee') {
+//                     window.location.href = 'leaveRequest.html';
+
+//                 } 
+                
+//                 else if (user.role == 'Manager') {
+//                     window.location.href = 'managerLeaveRequest.html';
+//                     alert('Login successful!');
+//                 }
+
+//                 else if (user.role == 'Director') {
+//                     window.location.href = 'managerLeaveRequest.html';
+//                     alert('Login successful!');
+//                 }
+//             } else {
+//                 alert('Employee data not found.');
+//             }
+//         } else {
+//             alert('Invalid username or password.');
+//         }
+//     } catch (error) {
+//         console.error('Error:', error);
+//         alert('An error occurred while logging in.');
+//     }
+// });

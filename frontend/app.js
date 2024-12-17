@@ -65,10 +65,36 @@ const server = http.createServer(async (req, res) => {
     if (req.url === "/") {
         filePath = "./views/index.html";
         layout_use = "./layouts/layout_with_topnav.html";
-    } else if (req.url === "/employees") {
+    } 
+
+    else if (req.url === "/emloyees") {
         filePath = "./views/employees/index.html";
         layout_use = "./layouts/layout_with_topnav.html";
-    } else {
+    } 
+
+      
+    else if (req.url === "/leaves1") {
+        filePath = "./views/leaves1/leaveRequest.html";
+        layout_use = "./layouts/layout_with_topnav.html";
+    } 
+
+    
+    else if (req.url === "/manager") {
+        filePath = "./views/Manager/managerLeaveRequest.html";
+        layout_use = "./layouts/layout_with_topnav.html";
+    } 
+
+    else if (req.url === "/director") {
+        filePath = "./views/Manager/managerLeaveRequest.html";
+        layout_use = "./layouts/layout_with_topnav.html";
+    }
+
+    else if (req.url === "/login") {
+        filePath = "./views/login/login.html";
+        layout_use = "./layouts/layout_with_topnav.html";
+    } 
+
+    else {
         res.writeHead(404, { "Content-Type": "text/html" });
         return res.end("<h1>404 Not Found</h1>");
     }

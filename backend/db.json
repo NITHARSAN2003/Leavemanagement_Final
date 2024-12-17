@@ -35,6 +35,24 @@
       "lastName": "Safeek",
       "dob": "2010-05-10",
       "doj": "2024-12-10"
+    },
+    {
+      "id": "EMP_nBWxQ",
+      "employeeId": "EMP_nBWxQ",
+      "nic": "45662212323",
+      "firstName": "Nithan",
+      "lastName": "nnnnnnnn",
+      "dob": "2002-01-07",
+      "doj": "2024-12-10"
+    },
+    {
+      "id": "EMP_Xv66M",
+      "employeeId": "EMP_Xv66M",
+      "nic": "44545451",
+      "firstName": "vithusan",
+      "lastName": "vithu",
+      "dob": "2001-01-09",
+      "doj": "2024-12-03"
     }
   ],
   "users": [
@@ -65,6 +83,20 @@
       "username": "EMP_6Ijm5",
       "password": "pwd123",
       "role": "Employee"
+    },
+    {
+      "username": "EMP_nBWxQ",
+      "password": "pwd123",
+      "role": "Director",
+      "employeeId": "EMP_nBWxQ",
+      "id": "EMP_nBWxQ"
+    },
+    {
+      "username": "EMP_Xv66M",
+      "password": "pwd123",
+      "role": "Employee",
+      "employeeId": "EMP_Xv66M",
+      "id": "EMP_Xv66M"
     }
   ],
   "leaveRequests": [

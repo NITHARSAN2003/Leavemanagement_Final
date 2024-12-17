@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Request</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    
+ <style>
+
+*{
+        margin: 0;
+        padding: 0;
+    
+    }
+/* Global Styles */
+body {
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #193759, #c53f63);
+}
+
+.mainForm{
+    width: 50%;
+}
+
+.container {
+    width: 615px;
+    padding: 55px;
+    height: inherit;
+    background: linear-gradient(135deg, #96bdea, #e22f5f);
+    border-radius: 12px;
+    box-shadow: 25px 26px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.8s ease;
+}
+
+.side-image {
+    width: 50%;
+    height:1200px;
+    border: none;
+    outline: none;
+    opacity: 3;
+    filter: grayscale(20%) contrast(50%);
+    position:absolute;
+    right: 1px;
+    top: 550px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    transform: translateY(-50%);
+    border-radius: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#logoutButton {
+    padding: 5px 15px;
+    font-size: 0.9rem;
+    background: #c53f63;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#logoutButton:hover {
+    background: #c9302c;
+}
+
+h2 {
+    color: #092e59;
+    margin-bottom: 20px;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.icon {
+    text-align: center;
+    font-size: 3rem;
+    color: #05203f;
+}
+.input-box input{
+    color: #630f26;
+}
+
+
+.input-box input[type="text"],
+.input-box input[type="date"],
+.input-box input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    outline: none;
+    background-color: #dac8c8;
+    transition: border-color 0.3s ease;
+}
+
+.input-box input:focus {
+    border-color: #630f26;
+    background-color: #9eaec1;
+}
+
+.input-box label {
+    font-weight: bold;
+    color: #092e59;
+    margin-right: 2px;
+}
+
+input[type="text"]:focus~label,
+input[type="date"]:focus~label,
+input[type="number"]:focus~label {
+    color: #4a90e2;
+}
+
+
+
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background: #630f26;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+
+.btn:hover {
+    background-color: #092e59;
+}
+
+.leave-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.leave-list li {
+    background-color: #eef5ff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.status3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color:#d5adbe ;
+    color:#092e59 ;
+    width: 500px;
+}
+
+.status.pending {
+    color: #d38314;
+}
+
+.status.approved {
+    color: #38ae38;
+}
+
+.status.rejected {
+    color: #d9534f;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .container {
+        padding: 15px;
+    }
+}
+
+ </style>
+
+</head>
+
+
+<body>
+    <div class="mainForm">
+        <div class="container">
+            <div class="header">
+                <h2 id="welcomeMessage"></h2>
+                <button id="logoutButton" class="btn-logout">Logout</button>
+            </div>
+
+
+            <div class="icon">
+
+                <i class="fa fa-envelope-open" aria-hidden="true"></i>
+
+            </div>
+
+
+            <h2>Submit Leave Request</h2>
+            <form id="leaveRequestForm" class="form">
+                <div class="input-box">
+                    <label for="reason">Reason:</label>
+                    <input type="text" id="reason" name="reason" required>
+                </div><br><br>
+
+                <div class="input-box">
+                    <label for="dateFrom">From:</label>
+                    <input type="date" id="dateFrom" name="dateFrom" required>
+                </div><br><br>
+                <div class="input-box">
+                    <label for="numOfDays">Number of Days:</label>
+                    <input type="number" id="numOfDays" name="numOfDays" required><br><br>
+
+                </div>
+
+                <div class="input-box">
+                    <label for="applicationDate">Application Date:</label>
+                    <input type="date" id="applicationDate" name="applicationDate" required><br><br>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+
+
+            <h3>Your Leave Requests</h3>
+            <ul id="leaveRequests" class="leave-list"></ul>
+        </div>
+    </div>
+    <img src="./wpsierra-featured-image.jpg" alt="Side Image" class="side-image">
+
+
+
+    <script >
+
+   
+document.addEventListener('DOMContentLoaded', async function() {
+    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+
+
+    if (!loggedInUser) {
+        alert('You must log in first!');
+        window.location.href = '/login';
+        return;
+    }
+console.log(loggedInUser);
+
+if(loggedInUser.role == 'Admin'){
+    window.location.href = 'managerLeaveRequest.html';
+}
+
+    // Display welcome message
+    const welcomeMessage = document.getElementById('welcomeMessage');
+    welcomeMessage.textContent = `Welcome, ${loggedInUser.firstName} ${loggedInUser.lastName}`;
+
+    // Logout button functionality
+    const logoutButton = document.getElementById('logoutButton');
+    logoutButton.addEventListener('click', function() {
+        localStorage.removeItem('loggedInUser');
+        alert('You have been logged out.');
+        window.location.href = '/login';
+    });
+
+    const leaveRequestForm = document.getElementById('leaveRequestForm');
+    const leaveRequestsList = document.getElementById('leaveRequests');
+
+    leaveRequestForm.addEventListener('submit', async function(event) {
+        event.preventDefault();
+
+        const reason = document.getElementById('reason').value;
+        const dateFrom = document.getElementById('dateFrom').value;
+        const numOfDays = document.getElementById('numOfDays').value;
+        const applicationDate = document.getElementById('applicationDate').value;
+
+        leaveRequestForm.reset();
+
+        // Validate that application date is less than dateFrom
+        if (new Date(applicationDate) >= new Date(dateFrom)) {
+            alert('Application date must be earlier than the leave start date.');
+            return;
+        }
+
+        const newLeaveRequest = {
+            employeeId: loggedInUser.employeeId,
+            reason,
+            dateFrom,
+            numOfDays,
+            applicationDate, // Use the selected application date
+            status: 'Pending' // Initial status
+        };
+
+        try {
+            const response = await fetch('http://localhost:3000/leaveRequests', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(newLeaveRequest)
+            });
+
+            if (response.ok) {
+                alert('Leave request submitted successfully!');
+                leaveRequestForm.reset();
+                loadLeaveRequests(loggedInUser.employeeId);
+            } else {
+                alert('Failed to submit leave request.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred while submitting the leave request.');
+        }
+    });
+
+    async function loadLeaveRequests(employeeId) {
+        try {
+            const response = await fetch(`http://localhost:3000/leaveRequests?employeeId=${employeeId}`);
+            const leaveRequests = await response.json();
+
+            leaveRequestsList.innerHTML = '';
+            leaveRequests.forEach(request => {
+                const li = document.createElement('li');
+                li.classList.add('leave-item'); // Add a class for styling
+                li.innerHTML = `<div class="status3">
+                    <div>Reason: ${request.reason}</div>
+                    <div>From: ${request.dateFrom}</div>
+                    <div>Days: ${request.numOfDays}</div>
+                    <div>Applied on: ${request.applicationDate}</div>
+                    <div>Status: <span class="status ${request.status.toLowerCase()}">${request.status}</span></div></div>
+                `;
+                leaveRequestsList.appendChild(li);
+            });
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+
+    loadLeaveRequests(loggedInUser.employeeId);
+});
+
+
+
+
+    </script>
+</body>
+
+</html>
