@@ -7,211 +7,216 @@
     <title>Leave Request</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    
- <style>
 
-*{
-        margin: 0;
-        padding: 0;
-    
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
 
-    
-/* Global Styles */
-body {
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #193759, #c53f63);
-}
-
-.mainForm{
-    width: 50%;
-}
-
-.container {
-    width: 615px;
-    padding: 55px;
-    height: inherit;
-    background: linear-gradient(135deg, #96bdea, #e22f5f);
-    border-radius: 12px;
-    box-shadow: 25px 26px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    animation: fadeIn 0.8s ease;
-}
-
-.side-image {
-    width: 50%;
-    height:1200px;
-    border: none;
-    outline: none;
-    opacity: 3;
-    filter: grayscale(20%) contrast(50%);
-    position:absolute;
-    right: 1px;
-    top: 550px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    transform: translateY(-50%);
-    border-radius: 10px;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-#logoutButton {
-    padding: 5px 15px;
-    font-size: 0.9rem;
-    background: #c53f63;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-#logoutButton:hover {
-    background: #c9302c;
-}
-
-h2 {
-    color: #092e59;
-    margin-bottom: 20px;
-}
+        }
 
 
-.form {
-    display: flex;
-    flex-direction: column;
-}
+        /* Global Styles */
+        body {
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #193759, #c53f63);
+        }
+
+        .mainForm {
+            width: 50%;
+            /* justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto; */
+        }
+
+        .container {
+            width: 615px;
+            padding: 55px;
+            height: inherit;
+            background: linear-gradient(135deg, #96bdea, #e22f5f);
+            border-radius: 12px;
+            box-shadow: 25px 26px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: fadeIn 0.8s ease;
+         
+        }
+
+        .side-image {
+            width: 50%;
+            height: 1200px;
+            border: none;
+            outline: none;
+            opacity: 3;
+            filter: grayscale(20%) contrast(50%);
+            position: absolute;
+            right: 1px;
+            top: 550px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            transform: translateY(-50%);
+            border-radius: 10px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        #logoutButton {
+            padding: 5px 15px;
+            font-size: 0.9rem;
+            background: #c53f63;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #logoutButton:hover {
+            background: #c9302c;
+        }
+
+        h2 {
+            color: #092e59;
+            margin-bottom: 20px;
+        }
 
 
-
-
-.icon {
-    text-align: center;
-    font-size: 3rem;
-    color: #05203f;
-}
-.input-box input{
-    color: #630f26;
-}
-
-
-.input-box input[type="text"],
-.input-box input[type="date"],
-.input-box input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 15px;
-    outline: none;
-    background-color: #dac8c8;
-    transition: border-color 0.3s ease;
-}
-
-.input-box input:focus {
-    border-color: #4a90e2;  /* Use a noticeable color for focus */
-    background-color: #dbe8f0;
-}
-
-
-.input-box label {
-    font-weight: bold;
-    color: #092e59;
-    margin-right: 2px;
-}
-
-input[type="text"]:focus~label,
-input[type="date"]:focus~label,
-input[type="number"]:focus~label {
-    color: #4a90e2;
-}
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
 
 
 
 
-.btn {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 20px;
-    background: #630f26;
-    color: #fff;
-    font-size: 1rem;
-    cursor: pointer;
-}
+        .icon {
+            text-align: center;
+            font-size: 3rem;
+            color: #05203f;
+        }
+
+        .input-box input {
+            color: #630f26;
+        }
+
+
+        .input-box input[type="text"],
+        .input-box input[type="date"],
+        .input-box input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            outline: none;
+            background-color: #dac8c8;
+            transition: border-color 0.3s ease;
+        }
+
+        .input-box input:focus {
+            border-color: #4a90e2;
+            /* Use a noticeable color for focus */
+            background-color: #dbe8f0;
+        }
+
+
+        .input-box label {
+            font-weight: bold;
+            color: #092e59;
+            margin-right: 2px;
+        }
+
+        input[type="text"]:focus~label,
+        input[type="date"]:focus~label,
+        input[type="number"]:focus~label {
+            color: #4a90e2;
+        }
 
 
 
-.btn:hover {
-    background-color: #092e59;
-}
 
-.leave-list {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 20px;
-}
-
-.leave-list li {
-    background-color: #eef5ff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    padding: 10px;
-    color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            background: #630f26;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+        }
 
 
 
-.status3 {
-    font-weight: bold;
-    text-transform: uppercase;
-    background-color:#d5adbe ;
-    color:#092e59 ;
-    width: 500px;
-}
+        .btn:hover {
+            background-color: #092e59;
+        }
 
-.status.pending {
-    color: #d38314;
-}
+        .leave-list {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
 
-.status.approved {
-    color: #38ae38;
-}
+        .leave-list li {
+            background-color: #eef5ff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            padding: 10px;
+            color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.status.rejected {
-    color: #d9534f;
-}
 
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
+        .status3 {
+            font-weight: bold;
+            text-transform: uppercase;
+            background-color: #d5adbe;
+            color: #092e59;
+            width: 500px;
+        }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        .status.pending {
+            color: #d38314;
+        }
 
-/* Responsive Design */
-@media (max-width: 500px) {
-    .container {
-        padding: 15px;
-    }
-}
+        .status.approved {
+            color: #38ae38;
+        }
 
- </style>
+        .status.rejected {
+            color: #d9534f;
+        }
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 500px) {
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
 
 </head>
 
@@ -265,101 +270,130 @@ input[type="number"]:focus~label {
 
 
 
-    <script >
+    <script>
 
-   
-document.addEventListener('DOMContentLoaded', async function() {
+
+document.addEventListener('DOMContentLoaded', async function () {
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
 
-
+    // Check if the user is logged in
     if (!loggedInUser) {
         alert('You must log in first!');
         window.location.href = '/login';
         return;
     }
-console.log(loggedInUser);
 
-if(loggedInUser.role == 'Admin'){
-    window.location.href = 'managerLeaveRequest.html';
-}
+    // Ensure loggedInUser contains the required properties
+    if (!loggedInUser.firstName || !loggedInUser.lastName || !loggedInUser.employeeId || !loggedInUser.role) {
+        alert('Invalid user data.');
+        window.location.href = '/login';
+        return;
+    }
+
+    console.log(loggedInUser);
+
+    // Redirect if user is an admin
+    if (loggedInUser.role === 'Admin') {
+        window.location.href = 'managerLeaveRequest.html';
+        return;
+    }
 
     // Display welcome message
     const welcomeMessage = document.getElementById('welcomeMessage');
-    welcomeMessage.textContent = `Welcome, ${loggedInUser.firstName} ${loggedInUser.lastName}`;
+    if (welcomeMessage) {
+        welcomeMessage.textContent = `Welcome, ${loggedInUser.firstName} ${loggedInUser.lastName}`;
+    }
 
     // Logout button functionality
     const logoutButton = document.getElementById('logoutButton');
-    logoutButton.addEventListener('click', function() {
-        localStorage.removeItem('loggedInUser');
-        alert('You have been logged out.');
-        window.location.href = '/login';
-    });
+    if (logoutButton) {
+        logoutButton.addEventListener('click', function () {
+            localStorage.removeItem('loggedInUser');
+            alert('You have been logged out.');
+            window.location.href = '/login';
+        });
+    }
 
     const leaveRequestForm = document.getElementById('leaveRequestForm');
     const leaveRequestsList = document.getElementById('leaveRequests');
 
-    leaveRequestForm.addEventListener('submit', async function(event) {
-        event.preventDefault();
+    if (leaveRequestForm) {
+        leaveRequestForm.addEventListener('submit', async function (event) {
+            event.preventDefault();
 
-        const reason = document.getElementById('reason').value;
-        const dateFrom = document.getElementById('dateFrom').value;
-        const numOfDays = document.getElementById('numOfDays').value;
-        const applicationDate = document.getElementById('applicationDate').value;
+            const reason = document.getElementById('reason').value;
+            const dateFrom = document.getElementById('dateFrom').value;
+            const numOfDays = document.getElementById('numOfDays').value;
+            const applicationDate = document.getElementById('applicationDate').value;
 
-        leaveRequestForm.reset();
+            leaveRequestForm.reset();
 
-        // Validate that application date is less than dateFrom
-        if (new Date(applicationDate) >= new Date(dateFrom)) {
-            alert('Application date must be earlier than the leave start date.');
-            return;
-        }
-
-        const newLeaveRequest = {
-            employeeId: loggedInUser.employeeId,
-            reason,
-            dateFrom,
-            numOfDays,
-            applicationDate, // Use the selected application date
-            status: 'Pending' // Initial status
-        };
-
-        try {
-            const response = await fetch('http://localhost:3000/leaveRequests', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(newLeaveRequest)
-            });
-
-            if (response.ok) {
-                alert('Leave request submitted successfully!');
-                leaveRequestForm.reset();
-                loadLeaveRequests(loggedInUser.employeeId);
-            } else {
-                alert('Failed to submit leave request.');
+            // Validate that application date is less than dateFrom
+            if (new Date(applicationDate) >= new Date(dateFrom)) {
+                alert('Application date must be earlier than the leave start date.');
+                return;
             }
-        } catch (error) {
-            console.error('Error:', error);
-            alert('An error occurred while submitting the leave request.');
-        }
-    });
+
+            const newLeaveRequest = {
+                employeeId: loggedInUser.employeeId,
+                reason,
+                dateFrom,
+                numOfDays,
+                applicationDate,
+                status: 'Pending' // Initial status
+            };
+
+            try {
+                const response = await fetch('http://localhost:3000/leaveRequests', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(newLeaveRequest)
+                });
+
+                if (response.ok) {
+                    alert('Leave request submitted successfully!');
+                    leaveRequestForm.reset();
+                    loadLeaveRequests(loggedInUser.employeeId);
+                } else {
+                    alert('Failed to submit leave request.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while submitting the leave request.');
+            }
+        });
+    }
 
     async function loadLeaveRequests(employeeId) {
         try {
             const response = await fetch(`http://localhost:3000/leaveRequests?employeeId=${employeeId}`);
             const leaveRequests = await response.json();
 
-            leaveRequestsList.innerHTML = '';
+            if (!Array.isArray(leaveRequests)) {
+                console.error('Expected an array of leave requests.');
+                return;
+            }
+
+            leaveRequestsList.innerHTML = ''; // Clear the list before adding new requests
+
+            if (leaveRequests.length === 0) {
+                leaveRequestsList.innerHTML = '<li>No leave requests found.</li>';
+                return;
+            }
+
             leaveRequests.forEach(request => {
                 const li = document.createElement('li');
-                li.classList.add('leave-item'); // Add a class for styling
-                li.innerHTML = `<div class="status3">
-                    <div>Reason: ${request.reason}</div>
-                    <div>From: ${request.dateFrom}</div>
-                    <div>Days: ${request.numOfDays}</div>
-                    <div>Applied on: ${request.applicationDate}</div>
-                    <div>Status: <span class="status ${request.status.toLowerCase()}">${request.status}</span></div></div>
+                li.classList.add('leave-item');
+                li.innerHTML = `
+                    <div class="status3">
+                        <div>Reason: ${request.reason}</div>
+                        <div>From: ${request.dateFrom}</div>
+                        <div>Days: ${request.numOfDays}</div>
+                        <div>Applied on: ${request.applicationDate}</div>
+                        <div>Status: <span class="status ${request.status.toLowerCase()}">${request.status}</span></div>
+                    </div>
                 `;
                 leaveRequestsList.appendChild(li);
             });

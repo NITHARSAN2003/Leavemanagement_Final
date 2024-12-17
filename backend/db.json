@@ -206,6 +206,15 @@
         "doj": "2024-09-01"
       },
       "processedDate": "2024-12-17"
+    },
+    {
+      "id": "d237",
+      "employeeId": "EMP_Xv66M",
+      "reason": "Trip",
+      "dateFrom": "2024-12-05",
+      "numOfDays": "2",
+      "applicationDate": "2024-12-04",
+      "status": "Pending"
     }
   ]
 }

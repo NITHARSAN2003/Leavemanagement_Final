@@ -22,12 +22,12 @@ body {
 
 
   
-  .navbar {
+  /* .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #630f26;
-  }
+  } */
 
   .navbar {
     display: flex;
