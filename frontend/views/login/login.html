@@ -7,236 +7,239 @@
     <title>Login</title>
     <!-- <link rel="stylesheet" href="styles.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<style>
-    /* Global Styles */
+    <style>
+        /* Global Styles */
 
-    *{
-        margin: 0;
-        padding: 0;
-    
-    }
-body {
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #4a90e2, #e94e77);
-}
+        * {
+            margin: 0;
+            padding: 0;
 
-.background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    z-index: -1; 
-    opacity: 0.5; }
+        }
 
-.container {
-    position: relative; 
-    z-index: 1;
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    transition: opacity 1s ease, transform 1s ease;
-    margin-top: 200px;
-    margin-left: 750px;
-}
-.side-image {
-    border: none;
-    outline: none;
-    opacity: 3;
-    filter: grayscale(20%) contrast(50%);
-    border-radius: 0;
-      position: absolute;
-      right: 20px; 
-      top: 450px; 
-      transform: translateY(50%);
-      width: 50%; 
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+        body {
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #4a90e2, #e94e77);
+        }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.5;
+        }
 
-h2 {
-    text-align: center;
-    color: #b42192;
-    margin-bottom: 20px;
-    
-}
+        .container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
 
-.login-form {
-    background: linear-gradient(135deg, #4a90e2, #e94e77);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 2rem;
-    opacity: 0;
-    transform: translateY(-100px);
-    animation: fadeIn 1s forwards;
-    
-}
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            transition: opacity 1s ease, transform 1s ease;
+            margin-top: 200px;
+            margin-left: 750px;
+        }
 
-.icon {
-    text-align: center;
-    font-size: 3rem;
-    color: #05203f;
-}
+        .side-image {
+            border: none;
+            outline: none;
+            opacity: 3;
+            filter: grayscale(20%) contrast(50%);
+            border-radius: 0;
+            position: absolute;
+            right: 20px;
+            top: 450px;
+            transform: translateY(50%);
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-.login-form h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-    color: #05203f;
-}
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
 
-.input-box {
-    position: relative;
-    margin-bottom: 1.5rem;
-}
+        h2 {
+            text-align: center;
+            color: #b42192;
+            margin-bottom: 20px;
+            align-items: center;
 
-.input-box input {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: none;
-    border-bottom: 2px solid #ddd;
-    outline: none;
-    background: transparent;
-    color: #100f0f;
-}
+        }
 
+        .login-form {
+            background: linear-gradient(135deg, #4a90e2, #e94e77);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 2rem;
+            opacity: 0;
+            transform: translateY(-100px);
+            animation: fadeIn 1s forwards;
 
-.input-box label {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    transition: 0.3s;
-    pointer-events: none;
-    color: #05203f;
-    font-size: 25px;
-}
+        }
 
-.input-box input{
-    color: #05203f;
-}
+        .icon {
+            text-align: center;
+            font-size: 3rem;
+            color: #05203f;
+        }
+
+        .login-form h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #05203f;
+        }
+
+        .input-box {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            border-bottom: 2px solid #ddd;
+            outline: none;
+            background: transparent;
+            color: #100f0f;
+        }
 
 
+        .input-box label {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-60%);
+            transition: 0.3s;
+            pointer-events: none;
+            color: #05203f;
+            font-size: 25px;
+        }
 
-
-.input-box input:focus ~ label,
-.input-box input:valid ~ label {
-    top: -3px;
-    color:#b42192;
-}
-
-.btn {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    outline: none;
-    background: #05203f;
-    color: white;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    border-radius: 20px;
-}
-
-.btn-logout {
-    padding: 5px 10px;
-    font-size: 14px;
-    background-color: #da1c1c;
-    border-radius: 5px;
-    cursor: pointer;
-    border: none;
-    font-size: 1rem;
-    padding: 10px;
-    color: white;
-}
-
-.btn:hover, .btn-logout:hover {
-    background-color: #b42192;
-}
-
-.leave-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.leave-list li {
-    background-color: #e9ecef;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 4px;
-    font-size: 14px;
-}
-
-
-.leave-item {
-    padding: 10px;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    background-color: #f9f9f9;
-    border-radius: 4px;
-}
-
-.status {
-    font-weight: bold;
-}
-
-.status.pending {
-    color: #f0ad4e;
-}
-
-.status.approved {
-    color: #5cb85c;
-}
-
-.status.rejected {
-    color: #d9534f;
-}
-.actions p {
-    text-align: center;
-    margin-top: 10px;
-    color: #b42192;
-}
-
-.actions p a {
-    color: #b42192;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-@media (max-width: 500px) {
-    .container {
-        padding: 10px;
-    }
-
-    .login-form {
-        padding: 1.5rem;
-    }
-}
+        .input-box input {
+            color: #05203f;
+        }
 
 
 
-</style>
+
+        .input-box input:focus~label,
+        .input-box input:valid~label {
+            top: -3px;
+            color: #b42192;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            background: #05203f;
+            color: white;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+        .btn-logout {
+            padding: 5px 10px;
+            font-size: 14px;
+            background-color: #da1c1c;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            padding: 10px;
+            color: white;
+        }
+
+        .btn:hover,
+        .btn-logout:hover {
+            background-color: #b42192;
+        }
+
+        .leave-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .leave-list li {
+            background-color: #e9ecef;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+
+        .leave-item {
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+
+        .status {
+            font-weight: bold;
+        }
+
+        .status.pending {
+            color: #f0ad4e;
+        }
+
+        .status.approved {
+            color: #5cb85c;
+        }
+
+        .status.rejected {
+            color: #d9534f;
+        }
+
+        .actions p {
+            text-align: center;
+            margin-top: 10px;
+            color: #b42192;
+        }
+
+        .actions p a {
+            color: #b42192;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        @media (max-width: 500px) {
+            .container {
+                padding: 10px;
+            }
+
+            .login-form {
+                padding: 1.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -251,93 +254,93 @@ h2 {
 
             <h2>Login</h2>
             <form id="loginForm" class="form">
-                
-                    <div class="input-box">
-                        <input type="text" id="username" name="username" required>
-                        <label for="username">Username:</label>
 
-                    </div>
-             
-                    <div class="input-box">
-                        <input type="password" id="password" name="password" required>
-                        <label for="password">Password:</label>
-                    </div>
+                <div class="input-box">
+                    <input type="text" id="username" name="username" required>
+                    <label for="username">Username:</label>
+
+                </div>
+
+                <div class="input-box">
+                    <input type="password" id="password" name="password" required>
+                    <label for="password">Password:</label>
+                </div>
 
 
-                    <button type="submit" class="btn">Login</button>
-                </form>
+                <button type="submit" class="btn">Login</button>
+            </form>
         </div>
     </div>
 
     <script>
         document.getElementById('loginForm').addEventListener('submit', async function (event) {
-    event.preventDefault();
+            event.preventDefault();
 
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
 
-    try {
-        // Fetch user data with embedded employee data
+            try {
+                // Fetch user data with embedded employee data
 
-        // http://localhost:3000/users?_embed=employee&username=EMP_L6Zae&password=pwd123
+                // http://localhost:3000/users?_embed=employee&username=EMP_L6Zae&password=pwd123
 
-        const response = await fetch(`http://localhost:3000/users?username=${username}&password=${password}&_embed=employee`);
-
-
-        const users = await response.json();
+                const response = await fetch(`http://localhost:3000/users?username=${username}&password=${password}&_embed=employee`);
 
 
-        if (users.length > 0) {
-            const user = users[0];
-
-            // Find the associated employee data
-            const employee = user.employee;
-
-            //console.log(employee);
-
-            if (employee) {
-                // Store the logged-in user and employee details
-                const loggedInUser = {
-
-                    username: user.username,
-                    employeeId: employee.employeeId,
-                    firstName: employee.firstName,
-                    lastName: employee.lastName,
-                    role: user.role
-                };
-
-                localStorage.setItem('loggedInUser', JSON.stringify(loggedInUser));
+                const users = await response.json();
 
 
-                if (user.role == 'Admin') {
+                if (users.length > 0) {
+                    const user = users[0];
 
-                    window.location.href = '/emloyees';
-                    alert('Login successful!');
+                    // Find the associated employee data
+                    const employee = user.employee;
+
+                    //console.log(employee);
+
+                    if (employee) {
+                        // Store the logged-in user and employee details
+                        const loggedInUser = {
+
+                            username: user.username,
+                            employeeId: employee.employeeId,
+                            firstName: employee.firstName,
+                            lastName: employee.lastName,
+                            role: user.role
+                        };
+
+                        localStorage.setItem('loggedInUser', JSON.stringify(loggedInUser));
+
+
+                        if (user.role == 'Admin') {
+
+                            window.location.href = '/emloyees';
+                            alert('Login successful!');
+                        }
+                        else if (user.role == 'Employee') {
+                            window.location.href = '/leaves1';
+                            alert('Login successful!');
+
+                        } else if (user.role == 'Manager') {
+                            window.location.href = '/manager';
+                            alert('Login successful!');
+                        }
+
+                        else if (user.role == 'Director') {
+                            window.location.href = '/manager';
+                            alert('Login successful!');
+                        }
+                    } else {
+                        alert('Employee data not found.');
+                    }
+                } else {
+                    alert('Invalid username or password.');
                 }
-                 else if (user.role == 'Employee') {
-                    window.location.href = '/leaves1';
-                    alert('Login successful!');
-
-                } else if (user.role == 'Manager') {
-                    window.location.href = '/manager';
-                    alert('Login successful!');
-                }
-
-                else if (user.role == 'Director') {
-                    window.location.href = '/manager';
-                    alert('Login successful!');
-                }
-            } else {
-                alert('Employee data not found.');
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while logging in.');
             }
-        } else {
-            alert('Invalid username or password.');
-        }
-    } catch (error) {
-        console.error('Error:', error);
-        alert('An error occurred while logging in.');
-    }
-});
+        });
 
     </script>
 </body>
